@@ -1,0 +1,42 @@
+{
+  "name": "@baleada/vue-simple-icons",
+  "version": "0.0.0",
+  "description": "Vue components that wrap up the Simple Icons set for the Baleada tookit.",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepare": "node scripts/prepare.js",
+    "update-icons": "npm i simple-icons@latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/baleada/vue-simple-icons.git"
+  },
+  "keywords": [
+    "baleada",
+    "icons",
+    "vue",
+    "simple icons"
+  ],
+  "author": {
+    "name": "Alex Vipond",
+    "email": "hello@alexvipond.dev",
+    "url": "https://alexvipond.dev"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/baleada/vue-simple-icons/issues"
+  },
+  "homepage": "https://baleada.netlify.com",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@baleada/prepare": "^0.1.1",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@vue/compiler-sfc": "^3.0.0-beta.20",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-vue": "^6.0.0-beta.6",
+    "simple-icons": "^3.2.0"
+  },
+  "sideEffects": false
+}
