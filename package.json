@@ -2,10 +2,22 @@
   "name": "@baleada/vue-simple-icons",
   "version": "0.0.0",
   "description": "Vue components that wrap up the Simple Icons set for the Baleada tookit.",
-  "main": "lib/index.js",
+  "type": "module",
+  "module": "lib/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js"
+    },
+    "./lite": {
+      "import": "./lite/index.js"
+    }
+  },
   "scripts": {
-    "prepare": "node scripts/prepare.js",
-    "update-icons": "npm i simple-icons@latest"
+    "prepare": "rollup --config rollup.config.js",
+    "test:only": "run() { npx uvu tests/$2 $1.test.js$; }; run",
+    "test": "npm run test:only .",
+    "dev": "vite",
+    "update-icons": "cd git_modules/simple-icons && git pull"
   },
   "repository": {
     "type": "git",
@@ -28,15 +40,12 @@
   },
   "homepage": "https://baleada.netlify.com",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "@baleada/prepare": "^0.1.1",
-    "@rollup/plugin-node-resolve": "^7.1.1",
-    "@vue/compiler-sfc": "^3.0.0-beta.20",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-vue": "^6.0.0-beta.6",
-    "simple-icons": "^3.2.0"
+    "@baleada/prepare": "^0.4.31",
+    "@vue/compiler-sfc": "^3.0.5",
+    "rollup": "^2.35.1",
+    "simple-icons": "^4.4.0",
+    "uvu": "^0.5.1",
+    "vite": "^1.0.0-rc.13"
   },
   "sideEffects": false
 }

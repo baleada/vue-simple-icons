@@ -88,13 +88,7 @@ sw.*
 
 # Published version
 lib
-eva-icons
-simple-icons
-heroicons
-octicons
-
-# Generated
-src
+lite
 
 # Git modules
 git_modules
